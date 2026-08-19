@@ -6,6 +6,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   const form = document.getElementById('contactForm');
   const formStatus = document.getElementById('formStatus');
+  const portraitImg = document.getElementById('portraitImg');
+
+  if (portraitImg) {
+    const markLoaded = () => portraitImg.classList.add('portrait-loaded');
+    if (portraitImg.complete && portraitImg.naturalWidth > 0) {
+      markLoaded();
+    } else {
+      portraitImg.addEventListener('load', markLoaded);
+      portraitImg.addEventListener('error', () => {
+        if (window.__PROFILE_FALLBACK__ && portraitImg.src !== window.__PROFILE_FALLBACK__) {
+          portraitImg.src = window.__PROFILE_FALLBACK__;
+          portraitImg.addEventListener('load', markLoaded, { once: true });
+        }
+      }, { once: true });
+    }
+  }
 
   yearEl.textContent = new Date().getFullYear();
 

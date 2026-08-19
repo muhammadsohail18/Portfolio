@@ -28,6 +28,7 @@
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="apple-touch-icon" href="profile.jpg" />
+<link rel="preload" as="image" href="profile.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -127,7 +128,7 @@
       <div class="hero-portrait">
         <div class="portrait-frame">
           <div class="portrait-glow"></div>
-          <img src="profile.jpg" alt="Muhammad Sohail — Front-End Developer" loading="eager" onerror="if(window.__PROFILE_FALLBACK__){this.onerror=null;this.src=window.__PROFILE_FALLBACK__;}" />
+          <img id="portraitImg" src="profile.jpg" alt="Muhammad Sohail — Front-End Developer" loading="eager" decoding="async" fetchpriority="high" onerror="if(window.__PROFILE_FALLBACK__){this.onerror=null;this.src=window.__PROFILE_FALLBACK__;this.classList.add('portrait-loaded');}" />
           <div class="portrait-corner tl"></div>
           <div class="portrait-corner tr"></div>
           <div class="portrait-corner bl"></div>
