@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js-loading');
+
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('.navbar');
   const menuToggle = document.getElementById('menuToggle');
@@ -9,18 +11,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const portraitImg = document.getElementById('portraitImg');
 
   if (portraitImg) {
-    const markLoaded = () => portraitImg.classList.add('portrait-loaded');
+    const markLoaded = () => {
+      portraitImg.classList.add('portrait-loaded');
+      document.documentElement.classList.remove('js-loading');
+    };
     if (portraitImg.complete && portraitImg.naturalWidth > 0) {
       markLoaded();
     } else {
-      portraitImg.addEventListener('load', markLoaded);
+      portraitImg.addEventListener('load', markLoaded, { once: true });
       portraitImg.addEventListener('error', () => {
         if (window.__PROFILE_FALLBACK__ && portraitImg.src !== window.__PROFILE_FALLBACK__) {
           portraitImg.src = window.__PROFILE_FALLBACK__;
           portraitImg.addEventListener('load', markLoaded, { once: true });
+        } else {
+          markLoaded();
         }
       }, { once: true });
+      setTimeout(markLoaded, 4000);
     }
+  } else {
+    document.documentElement.classList.remove('js-loading');
   }
 
   yearEl.textContent = new Date().getFullYear();
