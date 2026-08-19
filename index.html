@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#0a0a0b" />
+<meta name="color-scheme" content="dark" />
+
+<title>Muhammad Sohail — Front-End Developer & Software Engineering Student</title>
+<meta name="description" content="Portfolio of Muhammad Sohail — a final-year Software Engineering student at the University of Gujrat. Specializing in front-end development with HTML, CSS, and JavaScript." />
+<meta name="author" content="Muhammad Sohail" />
+<meta name="keywords" content="Muhammad Sohail, Front-End Developer, Software Engineering, University of Gujrat, HTML, CSS, JavaScript, React, Web Developer Portfolio" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://your-domain.vercel.app/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Muhammad Sohail — Front-End Developer" />
+<meta property="og:description" content="Final-year Software Engineering student at the University of Gujrat. Building clean, performant web interfaces with HTML, CSS, and JavaScript." />
+<meta property="og:image" content="https://your-domain.vercel.app/profile.jpg" />
+<meta property="og:url" content="https://your-domain.vercel.app/" />
+<meta property="og:site_name" content="Muhammad Sohail Portfolio" />
+<meta property="og:locale" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Muhammad Sohail — Front-End Developer" />
+<meta name="twitter:description" content="Final-year Software Engineering student at the University of Gujrat. Building clean, performant web interfaces." />
+<meta name="twitter:image" content="https://your-domain.vercel.app/profile.jpg" />
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="apple-touch-icon" href="profile.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Muhammad Sohail",
+  "jobTitle": "Front-End Developer",
+  "url": "https://your-domain.vercel.app/",
+  "image": "https://your-domain.vercel.app/profile.jpg",
+  "email": "mailto:Sohailmalik1803@gmail.com",
+  "telephone": "+92-334-469-4890",
+  "sameAs": [
+    "https://github.com/muhammadsohail18",
+    "https://www.linkedin.com/in/muhammad-sohail-18925b421/"
+  ],
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "University of Gujrat"
+  },
+  "knowsAbout": ["HTML5", "CSS3", "JavaScript", "React", "Front-End Development", "Software Engineering", "Web Design"]
+}
+</script>
+</head>
+<body>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="#top" class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="9" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M14 14L10 20L14 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M26 14L30 20L26 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22 12L18 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-name">Muhammad Sohail</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary btn-sm">
+      Let's Talk
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+      <span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<header id="top" class="hero">
+  <div class="container">
+    <div class="hero-meta">
+      <span class="status">
+        <span class="status-dot"></span>
+        Open to opportunities · 2026
+      </span>
+      <span class="location">Gujrat, Pakistan</span>
+    </div>
+
+    <div class="hero-main">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="line">Crafting clean,</span>
+          <span class="line">performant <em>interfaces</em></span>
+          <span class="line">for the modern web.</span>
+        </h1>
+
+        <div class="hero-bottom">
+          <p class="hero-sub">
+            I'm <strong>Muhammad Sohail</strong> — a final-year Software Engineering student
+            at the University of Gujrat. I design and build responsive front-end
+            experiences with HTML, CSS, and JavaScript.
+          </p>
+          <div class="hero-cta">
+            <a href="#work" class="btn btn-primary">
+              View Selected Work
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-portrait">
+        <div class="portrait-frame">
+          <div class="portrait-glow"></div>
+          <img src="profile.jpg" alt="Muhammad Sohail — Front-End Developer" loading="eager" onerror="if(window.__PROFILE_FALLBACK__){this.onerror=null;this.src=window.__PROFILE_FALLBACK__;}" />
+          <div class="portrait-corner tl"></div>
+          <div class="portrait-corner tr"></div>
+          <div class="portrait-corner bl"></div>
+          <div class="portrait-corner br"></div>
+        </div>
+        <div class="portrait-card">
+          <div class="portrait-card-row">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>Muhammad Sohail</span>
+          </div>
+          <div class="portrait-card-row">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <span>BS Software Engineering</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>HTML5</span><span class="dot">·</span>
+        <span>CSS3</span><span class="dot">·</span>
+        <span>JavaScript</span><span class="dot">·</span>
+        <span>React</span><span class="dot">·</span>
+        <span>Tailwind</span><span class="dot">·</span>
+        <span>Responsive Design</span><span class="dot">·</span>
+        <span>Git & GitHub</span><span class="dot">·</span>
+        <span>VS Code</span><span class="dot">·</span>
+        <span>HTML5</span><span class="dot">·</span>
+        <span>CSS3</span><span class="dot">·</span>
+        <span>JavaScript</span><span class="dot">·</span>
+        <span>React</span><span class="dot">·</span>
+        <span>Tailwind</span><span class="dot">·</span>
+        <span>Responsive Design</span><span class="dot">·</span>
+        <span>Git & GitHub</span><span class="dot">·</span>
+        <span>VS Code</span><span class="dot">·</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="section-title">About</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="lead">
+          A developer with a sharp eye for detail and a strong foundation in
+          software engineering principles.
+        </p>
+        <p>
+          I'm currently in my final year at the <strong>University of Gujrat</strong>,
+          specializing in front-end development. My focus is on building interfaces
+          that are not just visually polished, but also performant, accessible,
+          and easy to maintain.
+        </p>
+        <p>
+          I write semantic HTML, scalable CSS, and clean JavaScript. Beyond the
+          code, I care about the small details — typography, spacing, motion —
+          that make a great product feel effortless. I enjoy solving real
+          problems with thoughtful design and reliable engineering.
+        </p>
+
+        <div class="about-subsection">
+          <h4 class="subsection-title">What I Do</h4>
+          <ul class="check-list">
+            <li>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Design and build responsive web interfaces
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Translate UI/UX designs into pixel-perfect code
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Write clean, semantic, and maintainable code
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Integrate REST APIs and dynamic data
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Optimize for performance and accessibility
+            </li>
+          </ul>
+        </div>
+
+        <div class="about-subsection">
+          <h4 class="subsection-title">Currently</h4>
+          <p class="subsection-text">
+            Advancing my React skills through real-world projects, learning
+            TypeScript and Next.js, and actively looking for internship and
+            freelance opportunities to grow as a developer.
+          </p>
+        </div>
+
+        <div class="about-actions">
+          <a href="https://github.com/muhammadsohail18" target="_blank" rel="noopener" class="link-arrow">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+            GitHub Profile
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="about-info">
+        <div class="info-card">
+          <span class="info-label">Based in</span>
+          <span class="info-value">Gujrat, Pakistan</span>
+        </div>
+        <div class="info-card">
+          <span class="info-label">Degree</span>
+          <span class="info-value">BS Software Engineering</span>
+        </div>
+        <div class="info-card">
+          <span class="info-label">Status</span>
+          <span class="info-value">7th Semester · 2026</span>
+        </div>
+        <div class="info-card">
+          <span class="info-label">Focus</span>
+          <span class="info-value">Front-End Development</span>
+        </div>
+        <div class="info-card">
+          <span class="info-label">Languages</span>
+          <span class="info-value">Urdu · English</span>
+        </div>
+        <div class="info-card">
+          <span class="info-label">Availability</span>
+          <span class="info-value">Open to Opportunities</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Education</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <span class="timeline-dot"></span>
+          <span class="timeline-line"></span>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-meta">
+            <span class="timeline-year">2023 — Present</span>
+            <span class="timeline-tag">Current</span>
+          </div>
+          <h3 class="timeline-title">BS Software Engineering</h3>
+          <p class="timeline-inst">University of Gujrat</p>
+          <p class="timeline-desc">
+            Currently pursuing a Bachelor's degree in Software Engineering
+            with six semesters completed. Focused on front-end development,
+            software design principles, and modern web technologies.
+          </p>
+          <div class="timeline-detail">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <span>6 Semesters Completed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <span class="timeline-dot"></span>
+          <span class="timeline-line"></span>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-meta">
+            <span class="timeline-year">2021 — 2023</span>
+            <span class="timeline-tag">Intermediate</span>
+          </div>
+          <h3 class="timeline-title">FSc Pre-Engineering</h3>
+          <p class="timeline-inst">Army Public College, Kharian</p>
+          <p class="timeline-desc">
+            Completed intermediate studies in Pre-Engineering, building a
+            strong foundation in mathematics, physics, and computer science
+            that prepared me for higher studies in software engineering.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <span class="timeline-dot"></span>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-meta">
+            <span class="timeline-year">2019 — 2021</span>
+            <span class="timeline-tag">Matriculation</span>
+          </div>
+          <h3 class="timeline-title">Secondary School Certificate</h3>
+          <p class="timeline-inst">Army Public School, Attock</p>
+          <p class="timeline-desc">
+            Completed secondary education with a focus on science and
+            mathematics, developing strong analytical and problem-solving
+            skills from an early stage.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="expertise" class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Expertise</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+          </div>
+          <span class="skill-num">/01</span>
+        </div>
+        <h3>Core Front-End</h3>
+        <p>The foundation of every modern web experience.</p>
+        <ul>
+          <li>HTML5 & Semantic Markup</li>
+          <li>CSS3, Flexbox & Grid</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Responsive Web Design</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+          </div>
+          <span class="skill-num">/02</span>
+        </div>
+        <h3>Styling & UI</h3>
+        <p>Crafting visual systems that scale.</p>
+        <ul>
+          <li>Tailwind CSS</li>
+          <li>SASS / SCSS</li>
+          <li>Bootstrap</li>
+          <li>CSS Animations & Transitions</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M14.83 9.17l4.24-4.24M14.83 9.17l3.6-3.6M4.93 19.07l4.24-4.24"/></svg>
+          </div>
+          <span class="skill-num">/03</span>
+        </div>
+        <h3>Frameworks</h3>
+        <p>Building modern component-based UIs.</p>
+        <ul>
+          <li>React.js (Foundations)</li>
+          <li>Component Architecture</li>
+          <li>Hooks & State Management</li>
+          <li>REST API Integration</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </div>
+          <span class="skill-num">/04</span>
+        </div>
+        <h3>Tools & Workflow</h3>
+        <p>Shipping code efficiently and reliably.</p>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+          <li>Chrome DevTools</li>
+          <li>npm & Package Managers</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <span class="skill-num">/05</span>
+        </div>
+        <h3>Currently Learning</h3>
+        <p>Pushing the limits of what I can build.</p>
+        <ul>
+          <li>Advanced React Patterns</li>
+          <li>TypeScript</li>
+          <li>Next.js</li>
+          <li>Web Performance</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-header">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="skill-num">/06</span>
+        </div>
+        <h3>Soft Skills</h3>
+        <p>Working well with teams and self-directing.</p>
+        <ul>
+          <li>Problem Solving</li>
+          <li>Attention to Detail</li>
+          <li>Self-Driven Learning</li>
+          <li>Team Collaboration</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Selected Work</h2>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-visual">
+          <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="10" y="10" width="180" height="100" rx="8" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+            <circle cx="40" cy="40" r="8" fill="currentColor" opacity="0.4"/>
+            <rect x="60" y="32" width="100" height="8" rx="2" fill="currentColor" opacity="0.6"/>
+            <rect x="60" y="46" width="70" height="6" rx="2" fill="currentColor" opacity="0.3"/>
+            <rect x="30" y="70" width="60" height="30" rx="4" fill="currentColor" opacity="0.2"/>
+            <rect x="100" y="70" width="60" height="30" rx="4" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-year">2025</span>
+            <span class="project-type">React</span>
+          </div>
+          <h3 class="project-title">Atelier — React Best Practices</h3>
+          <p class="project-desc">
+            A curated React project demonstrating modern best practices —
+            component composition, reusable hooks, clean folder structure,
+            and maintainable architectural patterns.
+          </p>
+          <div class="project-tags">
+            <span>React</span><span>JavaScript</span><span>Best Practices</span>
+          </div>
+          <a href="https://github.com/muhammadsohail18" target="_blank" rel="noopener" class="project-link">
+            View Project
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-visual">
+          <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="30" y="20" width="50" height="30" rx="4" fill="currentColor" opacity="0.4"/>
+            <rect x="120" y="20" width="50" height="30" rx="4" fill="currentColor" opacity="0.4"/>
+            <rect x="75" y="70" width="50" height="30" rx="4" fill="currentColor" opacity="0.7"/>
+            <path d="M80 50L100 70M120 50L100 70" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-year">2025</span>
+            <span class="project-type">Interactive</span>
+          </div>
+          <h3 class="project-title">Drag & Drop Interface</h3>
+          <p class="project-desc">
+            An interactive drag-and-drop interface built with the native
+            HTML5 API — featuring smooth animations, reorderable lists,
+            and intuitive state handling.
+          </p>
+          <div class="project-tags">
+            <span>HTML5</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <a href="https://github.com/muhammadsohail18" target="_blank" rel="noopener" class="project-link">
+            View Project
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-visual">
+          <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="20" y="20" width="160" height="80" rx="8" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+            <line x1="20" y1="40" x2="180" y2="40" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+            <circle cx="40" cy="30" r="4" fill="currentColor" opacity="0.6"/>
+            <circle cx="60" cy="30" r="4" fill="currentColor" opacity="0.6"/>
+            <circle cx="80" cy="30" r="4" fill="currentColor" opacity="0.3"/>
+            <rect x="35" y="55" width="130" height="8" rx="2" fill="currentColor" opacity="0.4"/>
+            <rect x="35" y="70" width="100" height="8" rx="2" fill="currentColor" opacity="0.2"/>
+            <rect x="35" y="85" width="60" height="6" rx="2" fill="currentColor" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-year">2025</span>
+            <span class="project-type">Form UX</span>
+          </div>
+          <h3 class="project-title">Multi-Step Form</h3>
+          <p class="project-desc">
+            A polished multi-step form with progress indicator, client-side
+            validation, smooth transitions, and a clean UX — ideal for
+            onboarding flows.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Validation</span>
+          </div>
+          <a href="https://github.com/muhammadsohail18" target="_blank" rel="noopener" class="project-link">
+            View Project
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-visual">
+          <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="20" y="15" width="160" height="90" rx="10" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+            <rect x="35" y="35" width="80" height="20" rx="6" fill="currentColor" opacity="0.5"/>
+            <path d="M40 45L48 50L40 55" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <rect x="85" y="70" width="80" height="20" rx="6" fill="currentColor" opacity="0.25"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-year">2025</span>
+            <span class="project-type">Real-Time</span>
+          </div>
+          <h3 class="project-title">Real-Time Chat Interface</h3>
+          <p class="project-desc">
+            A modern chat UI with message bubbles, typing indicators, online
+            status, and a clean messenger-style layout that demonstrates
+            real-time state handling.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>WebSocket</span>
+          </div>
+          <a href="https://github.com/muhammadsohail18" target="_blank" rel="noopener" class="project-link">
+            View Project
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-visual">
+          <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="65" cy="60" r="30" fill="currentColor" opacity="0.4"/>
+            <circle cx="135" cy="55" r="20" fill="currentColor" opacity="0.3"/>
+            <circle cx="100" cy="95" r="15" fill="currentColor" opacity="0.5"/>
+            <circle cx="40" cy="80" r="12" fill="currentColor" opacity="0.2"/>
+            <circle cx="160" cy="85" r="10" fill="currentColor" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-year">2025</span>
+            <span class="project-type">API</span>
+          </div>
+          <h3 class="project-title">Weather App</h3>
+          <p class="project-desc">
+            A responsive weather application that fetches real-time data
+            from a public API — displaying current conditions, forecasts,
+            and dynamic visuals.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>API</span>
+          </div>
+          <a href="https://github.com/muhammadsohail18" target="_blank" rel="noopener" class="project-link">
+            View Project
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card project-card-cta">
+        <div class="project-body">
+          <h3 class="project-title">See more on GitHub</h3>
+          <p class="project-desc">
+            Explore the full collection of projects, experiments, and code samples.
+          </p>
+          <a href="https://github.com/muhammadsohail18" target="_blank" rel="noopener" class="btn btn-primary">
+            Visit GitHub
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-num">05</span>
+      <h2 class="section-title">Contact</h2>
+    </div>
+
+    <div class="contact-wrap">
+      <div class="contact-intro">
+        <h3 class="contact-heading">
+          Have a project in mind? <em>Let's talk.</em>
+        </h3>
+        <p class="contact-text">
+          I'm currently open to internships, freelance projects, and
+          collaboration opportunities. Drop a message and I'll get back
+          to you within 24 hours.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <a href="mailto:Sohailmalik1803@gmail.com" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          </div>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">Sohailmalik1803@gmail.com</span>
+          <svg class="contact-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/muhammad-sohail-18925b421/" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43c-1.14 0-2.07-.93-2.07-2.07s.93-2.07 2.07-2.07 2.07.93 2.07 2.07-.92 2.07-2.07 2.07zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          </div>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/muhammad-sohail</span>
+          <svg class="contact-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+        <a href="tel:+923344694890" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">+92 334 469 4890</span>
+          <svg class="contact-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+        <a href="https://github.com/muhammadsohail18" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          </div>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/muhammadsohail18</span>
+          <svg class="contact-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required placeholder="What's it about?" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+        </div>
+        <div class="form-foot">
+          <button type="submit" class="btn btn-primary">
+            Send Message
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <p class="form-status" id="formStatus"></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <span class="footer-logo">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="9" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M14 14L10 20L14 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M26 14L30 20L26 26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 12L18 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span>© <span id="year"></span> Muhammad Sohail. All rights reserved.</span>
+    </div>
+    <div class="footer-right">
+      <a href="mailto:Sohailmalik1803@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/muhammad-sohail-18925b421/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43c-1.14 0-2.07-.93-2.07-2.07s.93-2.07 2.07-2.07 2.07.93 2.07 2.07-.92 2.07-2.07 2.07zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+      </a>
+      <a href="https://github.com/muhammadsohail18" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 3-.4s2 .1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.7.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+      </a>
+      <a href="tel:+923344694890" aria-label="Phone">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="footer-big" aria-hidden="true">SOHAIL</div>
+</footer>
+
+<script src="image-fallback.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

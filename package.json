@@ -1,0 +1,20 @@
+{
+  "name": "muhammad-sohail-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio of Muhammad Sohail — Software Engineering student at the University of Gujrat.",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve .",
+    "build": "echo \"This is a static site — no build step required.\" && exit 0"
+  },
+  "keywords": [
+    "portfolio",
+    "front-end",
+    "web-developer",
+    "software-engineering",
+    "muhammad-sohail"
+  ],
+  "author": "Muhammad Sohail <Sohailmalik1803@gmail.com>",
+  "license": "MIT"
+}

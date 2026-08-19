@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0a0a0b" />
+<meta name="color-scheme" content="dark" />
+<title>404 — Page Not Found · Muhammad Sohail</title>
+<meta name="description" content="The page you're looking for doesn't exist." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .notfound-wrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px;
+    text-align: center;
+  }
+  .notfound-code {
+    font-family: var(--font-display);
+    font-size: clamp(8rem, 22vw, 16rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 24px;
+    font-optical-sizing: auto;
+    font-variation-settings: "opsz" 96;
+  }
+  .notfound-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 16px;
+    font-variation-settings: "opsz" 144, "SOFT" 70, "WONK" 1;
+  }
+  .notfound-desc {
+    color: var(--text-dim);
+    font-size: 1.05rem;
+    max-width: 480px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+<main class="notfound-wrap">
+  <span class="notfound-code">404</span>
+  <h1 class="notfound-title">Page not found</h1>
+  <p class="notfound-desc">
+    The page you're looking for doesn't exist or has been moved.
+    Let's get you back on track.
+  </p>
+  <a href="/" class="btn btn-primary">
+    Back to Home
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+  </a>
+</main>
+</body>
+</html>
