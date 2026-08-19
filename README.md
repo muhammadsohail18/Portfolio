@@ -21,11 +21,10 @@ Once deployed, your site will be live at:
 
 ```
 Portfolio/
-├── index.html          # Main HTML file
+├── index.html          # Main HTML file (with embedded base64 profile image)
 ├── styles.css          # All styles
 ├── script.js           # Animations & interactions
-├── image-fallback.js   # Embedded profile image (base64) — always loads
-├── profile.jpg         # Profile image (optional — speeds up load if included)
+├── profile.jpg         # Profile image (used for OG/Twitter cards + Apple touch icon)
 ├── favicon.svg         # SVG favicon
 ├── vercel.json         # Vercel configuration
 ├── package.json        # Project metadata
@@ -37,23 +36,27 @@ Portfolio/
 
 ## About the Profile Image
 
-The portfolio uses a **two-tier image loading strategy** so the profile photo is **always visible**, even if you forget to commit `profile.jpg`:
+The profile image is **embedded directly into `index.html` as a base64 data URI** — there is no external file dependency for the hero portrait:
 
-1. **Primary** — The `<img>` tag tries to load `profile.jpg` from your repo (fastest, lightest)
-2. **Fallback** — If `profile.jpg` fails to load (file missing, broken path, etc.), the page automatically swaps to a base64-encoded version embedded in `image-fallback.js`
+- ✅ The image is part of the HTML itself
+- ✅ Works on every deployment (Vercel, GitHub Pages, anywhere)
+- ✅ No cache issues, no missing file errors, no JavaScript dependency
+- ✅ `profile.jpg` is still kept in the repo for Open Graph / Twitter cards and Apple touch icon
 
-This means:
-- ✅ Deploying **with** `profile.jpg` committed → fastest load (recommended for production)
-- ✅ Deploying **without** `profile.jpg` → image still displays (slightly larger initial JS bundle)
-
-The embedded fallback is automatically regenerated whenever you update `profile.jpg` and run the build helper:
+If you want to replace the photo, run this PowerShell one-liner to re-embed the new image into `index.html`:
 
 ```powershell
-# Re-run this anytime you replace profile.jpg to refresh the fallback:
 $bytes = [System.IO.File]::ReadAllBytes("profile.jpg")
 $base64 = [Convert]::ToBase64String($bytes)
 $dataUri = "data:image/jpeg;base64,$base64"
-"window.__PROFILE_FALLBACK__ = `"$dataUri`";" | Out-File -LiteralPath "image-fallback.js" -Encoding utf8 -NoNewline
+
+$html = Get-Content "index.html" -Raw
+$pattern = '<img id="portraitImg"[^>]*/>'
+$replacement = '<img id="portraitImg" src="' + $dataUri + '" alt="Muhammad Sohail — Front-End Developer" loading="eager" decoding="async" fetchpriority="high" />'
+$html = $html -replace $pattern, $replacement
+
+$utf8NoBom = New-Object System.Text.UTF8Encoding($False)
+[System.IO.File]::WriteAllText("index.html", $html, $utf8NoBom)
 ```
 
 ## Local Development

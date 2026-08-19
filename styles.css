@@ -472,15 +472,6 @@ ul {
   -webkit-user-select: none;
 }
 
-.js-loading .portrait-frame img {
-  opacity: 0;
-}
-
-.js-loading .portrait-frame img.portrait-loaded,
-.js-loading .portrait-frame img[src^="data:"] {
-  opacity: 1;
-}
-
 .portrait-frame:hover img {
   filter: contrast(1.05) saturate(1);
   transform: scale(1.02);
