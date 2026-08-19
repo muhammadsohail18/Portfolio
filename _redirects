@@ -1,0 +1,12 @@
+# Redirects for Netlify
+# This file works alongside netlify.toml
+
+# Force HTTPS
+http://*your-domain.netlify.app/*   https://:splat 301!
+
+# Pretty URLs (already enabled by default for .html files, this is just explicit)
+/index.html          /          200
+/404.html            /404       301
+
+# Optional: redirect www to non-www (uncomment and customize when you have a custom domain)
+# https://www.your-domain.com/*   https://your-domain.com/:splat   301!

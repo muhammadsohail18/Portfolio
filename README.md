@@ -22,11 +22,15 @@ Once deployed, your site will be live at:
 ```
 Portfolio/
 ├── index.html          # Main HTML file (with embedded base64 profile image)
+├── 404.html            # Custom not-found page
 ├── styles.css          # All styles
 ├── script.js           # Animations & interactions
 ├── profile.jpg         # Profile image (used for OG/Twitter cards + Apple touch icon)
 ├── favicon.svg         # SVG favicon
-├── vercel.json         # Vercel configuration
+├── netlify.toml        # Netlify configuration
+├── _redirects          # Netlify redirects (HTTPS, pretty URLs)
+├── _headers            # Netlify security & cache headers
+├── vercel.json         # Vercel configuration (alternative deployment)
 ├── package.json        # Project metadata
 ├── robots.txt          # SEO crawler rules
 ├── sitemap.xml         # SEO sitemap
@@ -76,7 +80,70 @@ php -S localhost:8000
 
 Then visit `http://localhost:8000`.
 
+## Deploy to Netlify
+
+### Option 1 — Netlify Dashboard (Easiest)
+
+1. Push this folder to a GitHub repository
+2. Go to [netlify.com](https://netlify.com) and sign in
+3. Click **Add new site → Import an existing project**
+4. Select **GitHub** and authorize Netlify
+5. Pick your repository
+6. Netlify will auto-detect the static site settings from `netlify.toml`:
+   - Build command: *(empty)*
+   - Publish directory: `.`
+7. Click **Deploy site**
+
+Your site will be live at `https://your-site-name.netlify.app` within seconds.
+
+### Option 2 — Netlify CLI
+
+```powershell
+# Install Netlify CLI
+npm i -g netlify-cli
+
+# Login
+netlify login
+
+# Deploy from this folder
+cd "path\to\Portfolio"
+netlify deploy
+
+# Follow the prompts:
+# - Create & configure a new site? Yes
+# - Team: your team
+# - Site name: muhammad-sohail-portfolio
+# - Publish directory: ./
+```
+
+For production deployment:
+
+```powershell
+netlify deploy --prod
+```
+
+### Option 3 — Drag & Drop (No Git)
+
+1. Go to [app.netlify.com/drop](https://app.netlify.com/drop)
+2. Drag this entire folder onto the upload zone
+3. Done — your site is live instantly
+
+### Option 4 — Manual Deploy via CLI
+
+```powershell
+# First-time setup (creates a new site)
+netlify init
+
+# Deploy a draft
+netlify deploy
+
+# Deploy to production
+netlify deploy --prod
+```
+
 ## Deploy to Vercel
+
+The project also works perfectly on Vercel (config in `vercel.json`):
 
 ### Option 1 — Vercel Dashboard (Easiest)
 
@@ -90,20 +157,9 @@ Then visit `http://localhost:8000`.
 ### Option 2 — Vercel CLI
 
 ```powershell
-# Install Vercel CLI
 npm i -g vercel
-
-# Deploy from this folder
 cd "path\to\Portfolio"
 vercel
-
-# Follow the prompts:
-# - Set up and deploy? Yes
-# - Which scope? Your account
-# - Link to existing project? No
-# - Project name? muhammad-sohail-portfolio
-# - In which directory is your code located? ./
-# - Override settings? No
 ```
 
 For production deployment:
@@ -118,7 +174,24 @@ vercel --prod
 2. Drag and drop this entire folder into the upload area
 3. Click **Deploy**
 
-That's it. Your site will be live in seconds.
+## Custom Domain
+
+After deploying, you can connect a custom domain:
+
+### Netlify
+1. **Domain settings → Add custom domain**
+2. Update DNS records as instructed
+3. HTTPS is automatic via Let's Encrypt
+
+### Vercel
+1. **Settings → Domains → Add**
+2. Update DNS records
+3. HTTPS is automatic
+
+After setting up your domain, update these files with your real domain (replace `your-domain` placeholders):
+- `index.html` → `<link rel="canonical">`, all `og:*` and `twitter:*` meta tags, JSON-LD
+- `robots.txt` → `Sitemap:` URL
+- `sitemap.xml` → all `<loc>` URLs
 
 ## Deployment Checklist
 
@@ -126,11 +199,11 @@ Before deploying, run through this checklist to avoid any issues:
 
 - [ ] All files use **relative paths** (no `C:\`, no `/Users/...`)
 - [ ] `index.html` is at the **root** of the project (not in a subfolder)
-- [ ] `vercel.json` is at the **root** of the project
-- [ ] Filenames match exactly (case-sensitive): `index.html`, `styles.css`, `script.js`, `image-fallback.js`, `profile.jpg`, `favicon.svg`
-- [ ] `profile.jpg` is included OR `image-fallback.js` is included (both included = best)
+- [ ] Config files at root: `netlify.toml` (for Netlify) and/or `vercel.json` (for Vercel)
+- [ ] Filenames match exactly (case-sensitive): `index.html`, `styles.css`, `script.js`, `profile.jpg`, `favicon.svg`
+- [ ] Profile image embedded as base64 in `index.html` (works without `profile.jpg`)
 - [ ] No files in `.gitignore` that are needed (everything is needed for this site)
-- [ ] No Node.js version conflicts (this site has no Node dependencies)
+- [ ] No build dependencies — this is a pure static site
 
 ## Troubleshooting
 
@@ -138,10 +211,11 @@ Before deploying, run through this checklist to avoid any issues:
 |---|---|
 | 404 on deployment | Make sure `index.html` is at the project root, not inside a subfolder |
 | Fonts not loading | Check your browser isn't blocking Google Fonts |
-| Profile photo missing | Either commit `profile.jpg` OR keep `image-fallback.js` (both already included) |
+| Profile photo missing | The image is embedded as base64 in `index.html` — should always work |
 | CSS not applying | Verify the file name is exactly `styles.css` (lowercase, no spaces) |
-| Build fails on Vercel | Check the build logs — this site has **no build step**, so a build error usually means a missing file |
-| Want to change the domain | Settings → Domains in the Vercel dashboard, then update meta tags in `index.html` |
+| Build fails | This site has **no build step**, so a build error usually means a missing file |
+| Want to change the domain | Update domain settings in the dashboard, then update meta tags in `index.html` |
+| Netlify not auto-detecting settings | Ensure `netlify.toml` is at the project root |
 
 ## Custom Domain
 
